@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgb(222, 81, 71);
+            color: rgb(230, 235, 238);
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav button {
+            background: white;
+            color: red;
+            border: 1px solid red;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+            border: 1px solid #f1ecec;
+            background: #b2aee7;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hi, My name is Anushka</h1>
+    <h2>I'm a Web Developer</h2>
+    <img src="image.jpeg" alt="" height="200px">
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<div class="content" id="content" style="border:2px solid Tomato;">
+    <p>Welcome! My Portfolio, Click a button to see more information about me.</p>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.linkedin.com/in/anushka-0921b0288" target="_blank">LinkedIn <img src="linkedin.jpeg" alt="linkedin" height="50px"></a>
+    <a href="https://www.instagram.com/why.7157/profilecard/?igsh=bnJhOGl0YWx4ejBu" target="_blank">Instagram <img src="instagram.jpeg" alt="instagram" height="50px"></a>
+    <a href="https://x.com/AnuK5674?t=-H6H2kGQ26TAbqRhkL83oQ&s=09" target="_blank">Twitter <img src="twitter.jpeg" alt="twitter" height="50px"></a>
+</div>
+
+<script>
+    function showSection(section) {
+        const contentDiv = document.getElementById('content');
+        
+        if (section === 'home') {
+            contentDiv.innerHTML = `
+                <h3>Hi, I'm Anushka</h3>
+                <p>Frontend Developer with high-level experience in web design and development, producing quality work.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus ducimus nulla beatae tenetur cumque veritatis, unde aliquid architecto, placeat magnam nesciunt possimus, facilis provident accusamus molestias. Voluptates animi voluptas deserunt.</p>
+                <p>Contact: <img src="whatsapp_logo.jpeg" alt="WhatsApp" /  height="50px"> 9919697559 | <img src="email_logo.jpeg" alt="Email" / height="50px"> kanushka9919@gmail.com</p>
+            `;
+        } else if (section === 'about') {
+            contentDiv.innerHTML = `
+                <h3>About Me</h3>
+                <p>I am a b.tech student and have completed 4 projects. I support online 24/7. 
+                    Lorem ipsum, dolor sit amet 
+                    consectetur adipisicing elit. Delectus ducimus nulla 
+                    beatae tenetur cumque veritatis, unde aliquid architecto, placeat magnam nesciunt possimus, 
+                    facilis provident accusamus molestias. Voluptates
+                    animi voluptas deserunt.</p>
+            `;
+        } else if (section === 'skills') {
+            contentDiv.innerHTML = `
+                <h3>My Skills</h3>
+                <p>C, C++, HTML, CSS, JavaScript</p>
+            `;
+        } else if (section === 'projects') {
+            contentDiv.innerHTML = `
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="https://github.com/Anushk255/SnakeGame" target="_blank">Snake Game</a></li>
+                    <li><a href="https://github.com/Anushk255/-task-3.MOVIE-TICKET-BOOKING-SYSTEM" target="_blank">Movie Ticket System</a></li>
+                    <li><a href="https://github.com/Anushk255/-task1.STUDENT-GRADING-SYSTEM" target="_blank">Student Grading System</a></li>
+                </ul>
+            `;
+        } else if (section === 'contact') {
+            contentDiv.innerHTML = `
+                <h3>Contact Me</h3>
+                <p>WhatsApp: <img src="whatsapp_logo.jpeg" alt="WhatsApp" / width="40px"> 9919697559</p>
+                <p>Email: <img src="email_logo.jpeg" alt="Email" / width="40px"> kanushka9919@gmail.com</p>
+            `;
+        }
+    }
+</script>
+
+</body>
+</html>
+
